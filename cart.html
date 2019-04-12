@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>哈福网-智慧改变养老，创建美好生活</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hafu.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/bootstrap.css"/>	
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">	
+		<style type="text/css">
+@font-face {
+  font-family: 'iconfont';  /* project id 1056384 */
+  src: url('//at.alicdn.com/t/font_1056384_5ruzhand9be.eot');
+  src: url('//at.alicdn.com/t/font_1056384_5ruzhand9be.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1056384_5ruzhand9be.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1056384_5ruzhand9be.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1056384_5ruzhand9be.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1056384_5ruzhand9be.svg#iconfont') format('svg');
+}
+			
+				.iconfont {
+				  font-family:"iconfont" !important;
+				  font-size:16px;
+				  font-style:normal;
+				  -webkit-font-smoothing: antialiased;
+				  -webkit-text-stroke-width: 0.2px;
+				  -moz-osx-font-smoothing: grayscale;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="top">
+			<div class="margin">
+				<b id="hello"><!--欢迎来到哈福网！<a href="login.html">[请登录]</a><a href="register.html">[免费注册]</a>--></b>
+				<div class="top-r">
+					    <a href="#">我的商城</a>
+					    <span>|</span>
+					    <a href="#">我的订单</a>
+					    <span>|</span>
+					    <a href="#">我的收藏</a>
+					    <span>|</span>
+					    <dl>
+					    	<dt> <a href="#">站点导航<i class="down"></i></a></dt>
+					    	<dd><a href="#">帮助中心</a></dd>
+					    	<dd><a href="#">会员反馈</a></dd>
+					    </dl>
+				</div>
+			</div>
+		</div>
+	<div id="shophead">
+		<div class="margin">
+			<a href="index.html"><img src="images/logo.png"/></a>
+			<img src="images/shop.png" class="header-r"/>
+		</div>
+	</div>
+	
+	<div id="shopcart">
+		<div class="margin">
+			<table class="table">
+			  <thead>
+			    <tr style="background: #efefef;">
+			      <th scope="col" width="30px"><input type="checkbox" name="" id="" value="" /></th>
+			      <th scope="col" width="90px">全选</th>
+			      <th scope="col" width="430px">商品</th>
+			      <th scope="col" width="140px">单价(元)</th>
+			      <th scope="col" width="145px">数量</th>
+			      <th scope="col" width="110px">小计</th>
+			      <th scope="col" width="90px">操作</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <!--<tr>
+			      <th scope="row"><input type="checkbox" name="" id="" value="" /></th>
+			      <td><img src="images/1_main_3.jpg"/></td>
+			      <td><a href="" class="goodsdet" goodsid="19">伊利伊利全家奶粉JOY定制礼盒 全脂奶粉300g*2包 全脂甜奶粉300g*2包 感温杯*1只</a></td>
+			      <td><i class="price">￥139.00</i></td>
+			      <td>
+			      		<div class="quantity_form">
+			      			<span class="sub"> - </span>
+			      			<input type="number" name="" id="" value="" />
+			      			<span class="add"> + </span>
+			      		</div>
+			      </td>
+			      <td><i class="subtotal">￥139.00</i></td>
+			      <td><u class="delete">删除</u></td>
+			    </tr>-->
+			   
+			  </tbody>
+			  <tfoot>
+			  	<tr>
+			  		<td colspan="3"><a href="index.html" class="te">继续购物</a></td>
+			  		<td>已选商品<u class="totalsum">0</u>件</td>
+			  		<td colspan="2">商品总价（不含运费）<i class="total">￥0</i></td>
+			  		<td><b class="pay">去结算</b></td>
+			  		
+			  	</tr>
+			  </tfoot>
+			</table>
+		</div>
+	</div>
+	<div id="promise">
+			<img src="images/footer.png" width="100%"/>
+	</div>
+<!--以下是footer-->
+	<div id="footer">
+		<p> <a href="">商家管理中心</a></p>
+		<p>Copyright© 2006-2018 hafu. All Rights Reserved </p>
+		<p>湘ICP备17009657号 信息网络传播视听节目许可证号：1810530 <img src="images/jh.png"/>湘公网安备 43010502000556号</p>
+		<p><a href=""><img src="images/brand_bottom_small.jpg"/></a><a href=""><img src="images/footer_shuidi.png.jpg"/></a></p>
+	</div>
+	
+	<div id="alert">
+		<div class="box">
+			<h3><span>╳</span></h3>
+			<p><span class="iconfont">&#xe607;</span>确定删除吗？</p>
+			<h5><input type="button" id="yes" value="确定" /><input type="button" id="no" value="取消" /></h5>
+		</div>
+	</div>
+	</body>
+	<script src="js/main-cart.js" type="module"></script>
+	
+	
+	
+</html>

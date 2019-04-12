@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>哈福网-智慧改变养老，创建美好生活</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<div id="header">
+			<div class="margin">
+				<a href="index.html" target="_parent"><img src="images/logo.png"/></a>
+				<img src="images/top_res.png"/>
+			</div>
+		</div>
+		<div id="main">
+			<div class="margin">
+				<div class="main-l">
+					<img src="http://mall.hafu365.com/filebase//WebContent/upload/img/adv/1535953408332.jpg"/>				
+				</div>
+				<div id="register">
+					<h3><b>哈福注册</b><p><i>已有账号</i><a href="login.html">在此登陆</a></p></h3>
+					<dl class="log-in">	
+					<form class="form">
+					用 户 名 ：<input type="text" name="user" id="user" value="" required="true" /><br />
+					 设置密码 ：<input type="password" name="pass" id="pass" value="" digits=true /><br />
+					 确认密码 ：<input type="password" name="pass2" id="pass2" value="" equalTo="#pass" /><br />
+					<input type="button" name="" class="log" id="btn" value="同意协议并注册" /><br /><br />
+					<i></i>
+				</form>
+
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div id="promise">
+			<img src="images/footer.png" width="100%"/>
+		</div>
+		<div id="footer">
+		<p> <a href="">商家管理中心</a></p>
+		<p>Copyright© 2006-2018 hafu. All Rights Reserved </p>
+		<p>湘ICP备17009657号 信息网络传播视听节目许可证号：1810530 <img src="images/jh.png"/>湘公网安备 43010502000556号</p>
+		<p><a href=""><img src="images/brand_bottom_small.jpg"/></a><a href=""><img src="images/footer_shuidi.png.jpg"/></a></p>
+	</div>
+
+	</body>
+	<script src="libs/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="libs/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="libs/jquery.validate.messages_zh.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		class Register{
+	constructor(){
+		this.url = "http://www.icodeilife.cn/ctrl/register.php";
+		this.reg();
+	}
+
+	reg(){
+		var that = this;
+		$("#btn").click(function(){
+//					3.触发事件时开启ajax
+			that.load()
+		})
+	}
+	load(){
+		$.ajax({
+//					4.使用接口
+			url:this.url,
+//					7.成功之后的处理
+			success:function(res){
+				switch(res){
+					case "0":
+						$("i").html("用户名重复");break;
+					case "1":
+						$("i").html("注册成功，5秒后跳转到登录");
+						setTimeout(()=>{
+							location.href = "login.html";
+						},5000)
+						break;
+					case "2":
+						$("i").html("数据不全");break;
+				}
+			},
+//					5.发送数据
+			data:{
+				tel:$("#user").val(),
+				pass:$("#pass").val()
+			},
+//					6.发送之前loading
+//			beforeSend:function(){
+//				$("i").html("<img src='loading.gif'>")
+//			}
+		})
+	}
+}
+new Register(); 
+	</script>
+</html>
